@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="alumno in alumnos">
+                {{ alumno.nombre }} : {{ alumno.edad }} 
+
+            </li>
+        </ul>
+        <hr>
+        <span>Elige un nick: </span>
+        <input type="text" v-model="nick" name="nick" id="nick">
+        <h3> {{ nick }}</h3>
+
+        <hr>
+        <span>Area de un rectangulo</span>
+        <input type="number" v-model="base" name="base" id="base">
+        <input type="number" v-model="altura" name="altura" id="altura">
+
+        <h3 v-bind="area"> {{ area }}</h3>
+
+    </div>
+</body>
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Ciclo for -->
+        <ul>
+            <li v-for="alumno in alumnos">{{ alumno.nombre }} : {{ alumno.edad }}</li>
+        </ul>
+
+        <hr>
+        <!-- Escribir un nick -->
+        <span>Escribe un nick: </span> <input type="text" v-model="nick" name="nick" id="nick">
+        <h2> {{ nick }}</h2>
+
+        <hr>
+        <!-- Area de un rectangulo -->
+        <h2>Area de un rectangulo</h2>
+        <span>base: </span> <input type="number" v-model="base" name="base" id="base"> <br>
+        <span>altura: </span> <input type="number" v-model="altura" name="altura" id="altura"><br>
+        <h2 v-bind="areaRectangulo">{{ areaRectangulo }}</h2>
+
+ 
+    </div>
+    
+</body>
+
+<!-- versión de desarrollo, incluye advertencias de ayuda en la consola -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</html>

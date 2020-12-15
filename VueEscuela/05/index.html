@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        
+        <input type="range" v-model="tiempo">{{ tiempo }}
+        <hr>
+        <!-- Busqueda -->
+        <input type="search" v-model="busqueda" placeholder="Buscar tarea">
+        <hr>
+        <li v-for="(value, key) in usuario">{{ key }} : {{ value }}</li>
+        <hr>
+        <!-- <li v-for="tarea in tareas">{{ tarea.nombre }}:{{ tarea.tiempo }}</li> -->
+        <!-- usando el metodo de filtroTareas -->
+        <li v-for="tarea in filtroTareas">{{ tarea.nombre }}:{{ tarea.tiempo }}</li>
+    </div>
+
+    <!-- Vue y JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <Script src="index.js"></Script>
+</body>
+</html>

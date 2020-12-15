@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Lista for -->
+        <ul>
+            <li v-for="alumno in alumnos">{{ alumno.nombre }} : {{ alumno.edad }}</li>
+        </ul>
+        <hr>
+        <!-- Escribe nick -->
+        <span>Escribe un nick: </span><input type="text" v-model="nick" name="nick" id="nick">
+        <h3>{{ nick }}</h3>
+        <hr>
+        <!-- Area de rectangulo -->
+        Calcular area de rectangulo <br>
+        <span>Base: </span><input type="number" v-model="base" name="base" id="base">
+        <span>Altura: </span><input type="number" v-model="altura" name="altura" id="altura">
+        <h3 v-bind="altura">{{ area }}</h3>
+    </div>
+</body>
+<!-- versión de desarrollo, incluye advertencias de ayuda en la consola -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+</html>

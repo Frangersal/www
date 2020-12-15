@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue</title>
+</head>
+<body>
+    <!-- Asignarle un id -->
+    <div id="app">
+
+        <!-- con v-model establecerlo con un atributo -->
+        <input v-model="ancho" type="range">Ancho
+        <br>
+        <input v-model="alto" type="range">Alto
+        <br>
+        {{ urlCompleta }}
+        <br>
+        <img v-bind:src="urlCompleta" alt="">
+        <!-- <input type="text" v-model="enlace">
+        <a v-bind:href="enlace">{{ enlace }}</a> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue">
+    </script>
+    
+    <script src="index.js"></script>
+
+</body>
+</html>
